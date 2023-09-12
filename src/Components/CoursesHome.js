@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import CoursesBtn from './CoursesBtn';
 
-const Courses = () => {
-    const [courses,setCourses]=useState([]);
+const CoursesHome = () => {
+  const [courses,setCourses]=useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/courses')
         .then((res)=>res.json())
         .then((data)=>setCourses(data));
         console.log(courses);
     },[])
-    
-    return (
-        <div>
+  return (
+    <div>
+      <div>
             <div className="relative mx-auto py-8 md:py-16 px-4 w-full  bg-[#49a99a]">
       <div className="mx-auto max-w-5xl">
 
@@ -51,7 +51,8 @@ const Courses = () => {
       </div>      
     </div>
         </div>
-    );
+    </div>
+  );
 };
 
-export default Courses;
+export default CoursesHome;

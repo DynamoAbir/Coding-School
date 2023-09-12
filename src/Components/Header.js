@@ -35,9 +35,9 @@ const Header = () => {
         {/* ::Navbar */}
         <nav className="hidden md:flex flex-wrap items-center justify-center text-xl font-semibold tracking-wide">
           <Link to="/" className="mr-8 hover:text-indigo-500">Home</Link>
-          <Link to="/" className="mr-8 hover:text-indigo-500">Courses</Link>
-          <Link to="/" className="mr-8 hover:text-indigo-500">FAQ</Link>
-          <Link to="/" className="mr-8 hover:text-indigo-500">Blog</Link>
+          <Link to="/courses" className="mr-8 hover:text-indigo-500">Courses</Link>
+          <Link to="/faq" className="mr-8 hover:text-indigo-500">FAQ</Link>
+          <Link to="/blog" className="mr-8 hover:text-indigo-500">Blog</Link>
         </nav>
         {/* ::Avatar */}
         <div className="hidden sm:inline-flex ml-auto md:ml-0 mr-4 md:mr-0 cursor-pointer">
