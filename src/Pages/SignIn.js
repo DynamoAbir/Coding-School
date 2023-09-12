@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import banner from '../Assets/3426526.jpg'
 import { FaMailBulk,FaUserEdit,FaKey } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SignUpBtn from '../Components/SignUpBtn';
+import { AuthContext } from '../Context/UseContext';
+
+
+
 const SignIn = () => {
+
+  const {signIn}=useContext(AuthContext);
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    const form=e.target;
+    const email=form.email.value;
+    const password=form.password.value;
+
+    signIn(email,password)
+    .then(result=>{
+      const user=result.user;
+      console.log(user);
+    })
+    console.log(email,password);
+  }
     return (
         <div>
         <div className="w-full mt-[-20px] py-10 px-1 sm:px-5 flex flex-col items-center bg-gradient-to-t from-gray-100 via-white to-[#b2eac9] font-body">
@@ -20,6 +41,7 @@ const SignIn = () => {
             <div className="col-span-2 lg:col-span-1 py-10 px-10">
               {/* :::Login form */}
               <form
+              onSubmit={handleSubmit}
                 action=""
                 className="flex flex-col items-center justify-center"
               >
@@ -68,12 +90,8 @@ const SignIn = () => {
                     Remember me
                   </label>
                   {/* Button Login */}
-                  <button
-                    type="submit"
-                    className="py-2 px-6 rounded-lg bg-[#49a99a] text-white font-semibold tracking-wider uppercase transition duration-150 transform hover:scale-105 hover:bg-yellow-500"
-                  >
-                    Login
-                  </button>
+                  
+                 <button type="submit"><SignUpBtn>LOGIN</SignUpBtn></button>
                 </div>
               </form>
   

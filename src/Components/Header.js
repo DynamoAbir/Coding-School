@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/logo.png'
+import { AuthContext } from '../Context/UseContext';
 
 const Header = () => {
+  const {user,logOut}=useContext(AuthContext);
+  console.log(user);
   const [isOpen, setIsOpen] = useState(false);
+  const handleLogOut=()=>{
+    logOut()
+    
+  }
   const items=<>
-    <li><Link>Home</Link></li>
-        <li><Link>Courses</Link></li>
-        <li><Link>FAQ</Link></li>
-        <li><Link>Blog</Link></li>
+    <li><Link to='/'>Home</Link></li>
+        <li><Link to='/courses'>Courses</Link></li>
+        <li><Link to='/faq'>FAQ</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
     </>
     return (
       <header className="w-full bg-[#49a99a] text-white body-font mb-4 shadow-sm">
@@ -34,7 +41,8 @@ const Header = () => {
         </nav>
         {/* ::Avatar */}
         <div className="hidden sm:inline-flex ml-auto md:ml-0 mr-4 md:mr-0 cursor-pointer">
-        <Link to="/signup" className="mr-8 text-xl hover:text-indigo-500">Sign In</Link>
+        {user?.email?<button onClick={handleLogOut} className="mr-8 text-xl hover:text-indigo-500">Sign Out</button>:<Link to="/signup" className="mr-8 text-xl hover:text-indigo-500">Sign In</Link>
+        }
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
