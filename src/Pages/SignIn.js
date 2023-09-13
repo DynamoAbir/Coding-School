@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import banner from '../Assets/3426526.jpg'
-import { FaMailBulk,FaUserEdit,FaKey } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaMailBulk,FaKey } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SignUpBtn from '../Components/SignUpBtn';
 import { AuthContext } from '../Context/UseContext';
 
@@ -10,7 +10,9 @@ import { AuthContext } from '../Context/UseContext';
 const SignIn = () => {
 
   const {signIn}=useContext(AuthContext);
-
+  const navigate=useNavigate();
+  const location=useLocation();
+  const from=location.state?.from?.pathname || '/';
   const handleSubmit=(e)=>{
     e.preventDefault();
     const form=e.target;
@@ -21,7 +23,9 @@ const SignIn = () => {
     .then(result=>{
       const user=result.user;
       console.log(user);
+      navigate(from,{replace:true})
     })
+    .catch(err=>console.error(err));
     console.log(email,password);
   }
     return (

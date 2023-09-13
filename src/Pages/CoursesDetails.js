@@ -1,17 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { usePDF } from 'react-to-pdf';
 
 
+
 const CoursesDetails = () => {
-	const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
     const course=useLoaderData();
     console.log(course);
-	
-
+    const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
     return (
         <div>
-            <section ref={targetRef}>
+            <section  ref={targetRef}>
 	<div className="dark:bg-violet-400">
 		<div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-900">
 			<h1 className="text-5xl font-bold leadi sm:text-6xl xl:max-w-3xl dark:text-gray-900">{course.name}</h1>
@@ -19,7 +18,7 @@ const CoursesDetails = () => {
 			<div className="flex flex-wrap justify-center">
 				
 				<button onClick={() => toPDF()} type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-700 dark:text-gray-900 hover:bg-[#49a99a] hover:text-white">Download Outline</button>
-				<button type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-700 dark:text-gray-900 hover:bg-[#49a99a] hover:text-white">Get Premium Access!</button>
+				<Link to={`/checkout/${course.id}`}><button type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-700 dark:text-gray-900 hover:bg-[#49a99a] hover:text-white">Get Premium Access!</button></Link>
 			</div>
 		</div>
 	</div>

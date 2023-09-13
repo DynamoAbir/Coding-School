@@ -41,6 +41,8 @@ const CoursesCards = () => {
                   <span className="items-center">
                     <span className="mr-4 text-sm text-black font-semibold">{`Current Bid: ${course.description.slice(0,200)}`}</span>
                    </span>
+
+                   <span className='text-3xl border rounded-full '><p>{course.price}$</p></span>
                  <CoursesBtn course={course}>Course Details</CoursesBtn>
                 </div>
               </a>
