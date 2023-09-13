@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CoursesBtn from './CoursesBtn';
+
+
 const CoursesCards = () => {
     const [courses,setCourses]=useState([]);
     useEffect(()=>{
@@ -39,7 +41,7 @@ const CoursesCards = () => {
                   <span className="items-center">
                     <span className="mr-4 text-sm text-black font-semibold">{`Current Bid: ${course.description.slice(0,200)}`}</span>
                    </span>
-                  <CoursesBtn>Course Details</CoursesBtn>
+                 <CoursesBtn course={course}>Course Details</CoursesBtn>
                 </div>
               </a>
             ))

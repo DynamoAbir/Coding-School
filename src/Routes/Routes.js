@@ -1,5 +1,6 @@
 import Blog from "../Pages/Blog";
 import Courses from "../Pages/Courses";
+import CoursesDetails from "../Pages/CoursesDetails";
 import FAQ from "../Pages/FAQ";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
@@ -19,7 +20,7 @@ export const router=createBrowserRouter([
             },
             {
                 path:'/courses',
-                element:<Courses></Courses>
+                element:<Courses></Courses>,
             },
             {
                 path:'/faq',
@@ -37,6 +38,12 @@ export const router=createBrowserRouter([
             {
                 path:'/signin',
                 element:<SignIn></SignIn>
+            },
+            {
+                path:'/courses/:id',
+                element:<CoursesDetails></CoursesDetails>,
+                loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`),
+                
             }
         ]
     }

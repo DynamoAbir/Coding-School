@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CoursesCards from '../Components/CoursesCards';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   const [courses,setCourses]=useState([]);
@@ -23,7 +24,9 @@ const Courses = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
           <ul className="menu w-96 min-h-full bg-[#f3fdf7] text-base-content">
             {/* Sidebar content here */}
-            {courses.map(c=><li><a className='py-10 text-xl font-bold px-20'>{c.name}</a></li>)}
+            {courses.map(c=>(<Link to={`/courses/${c.id}`} key={courses.id}>
+            <li><a className='py-10 text-xl font-bold px-20'> {c.name}</a></li>
+            </Link>))}
             
             
           </ul>
