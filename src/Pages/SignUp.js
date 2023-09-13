@@ -1,15 +1,19 @@
 import React, { useContext } from "react";
 import banner from '../Assets/3426526.jpg'
 import { FaMailBulk,FaUserEdit,FaKey } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SignUpBtn from "../Components/SignUpBtn";
 import { AuthContext } from "../Context/UseContext";
+import toast from "react-hot-toast";
 
 
 
 
 const SignUp = () => {
-  const {createUser}=useContext(AuthContext)
+  const {createUser}=useContext(AuthContext);
+  const navigate=useNavigate();
+  const location=useLocation();
+  const from=location.state?.from?.pathname || '/';
   const handleSubmit=(e)=>{
     e.preventDefault();
     const form=e.target;
@@ -21,6 +25,8 @@ const SignUp = () => {
     .then(result=>{
       const user=result.user;
       console.log(user);
+      navigate(from,{replace:true})
+      toast.success("Account Created Successfully")
     })
     .catch(error=>console.error(error))
     

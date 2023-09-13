@@ -4,6 +4,7 @@ import { FaMailBulk,FaKey } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SignUpBtn from '../Components/SignUpBtn';
 import { AuthContext } from '../Context/UseContext';
+import toast from 'react-hot-toast';
 
 
 
@@ -22,6 +23,7 @@ const SignIn = () => {
     signIn(email,password)
     .then(result=>{
       const user=result.user;
+      toast.success('Login Successfully..')
       console.log(user);
       navigate(from,{replace:true})
     })
