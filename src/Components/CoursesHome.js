@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CoursesBtn from './CoursesBtn';
+import { Link } from 'react-router-dom';
 
 const CoursesHome = () => {
   const [courses,setCourses]=useState([]);
@@ -18,7 +19,7 @@ const CoursesHome = () => {
         {/* :TITLE CONTAINER */}
         <div className="flex items-end justify-between">
           <h2 className="text-xl sm:text-2xl text-white font-bold">Top Rated Courses</h2>
-          <a href="#link" className="text-base text-white text-opacity-60 font-semibold hover:underline hover:text-opacity-80">See All</a>
+          <Link to='/courses' className="text-base text-white text-opacity-60 font-semibold hover:underline hover:text-opacity-80">See All</Link>
         </div>
 
 
@@ -41,7 +42,7 @@ const CoursesHome = () => {
                 <span className="items-center">
                   <span className="mr-4 text-sm text-white font-semibold">{`Current Bid: ${course.description.slice(0,200)}`}</span>
                  </span>
-                <CoursesBtn>Course Details</CoursesBtn>
+                
               </div>
             </a>
           ))

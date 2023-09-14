@@ -2,6 +2,7 @@ import React from "react";
 import banner from "../Assets/3426526.jpg";
 import miniBanner from "../Assets/6502423.jpg";
 import CodingBtn from "./CodingBtn";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="mt-[-14px] relative w-full h-full bg-green-300 bg-opacity-10">
@@ -28,7 +29,7 @@ const Banner = () => {
             {/* :::Button & Social media */}
             <div className="mt-10 flex flex-col sm:flex-row items-center">
               {/* Button */}
-              <CodingBtn>Lets Go To Our Courses</CodingBtn>
+              <Link to='/courses'><CodingBtn>Lets Go To Our Courses</CodingBtn></Link>
               {/* Social networks */}
               <div className="mt-5 sm:mt-0 sm:ml-5 inline-flex items-center">
                 {/* Twitter */}

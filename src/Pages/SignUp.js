@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 
 
 const SignUp = () => {
-  const {createUser}=useContext(AuthContext);
+  const {createUser,googleSignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from=location.state?.from?.pathname || '/';
@@ -31,6 +31,17 @@ const SignUp = () => {
     .catch(error=>console.error(error))
     
   }
+
+  /* Google */
+const handleGoogle=()=>{
+  googleSignIn()
+  .then(result=>{
+   const user=result.user;
+    console.log(user);
+  })
+  .catch(err=>console.error(err))
+}
+  /* Google */
 
   return (
     <div>
@@ -144,7 +155,7 @@ const SignUp = () => {
             {/* :::External Autentification */}
             <div className="flex flex-col items-center text-white">
               
-              <button className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600">
+              <button onClick={handleGoogle} className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600">
                 <svg
                   role="img"
                   className="flex-shrink-0 w-5 h-5 mr-5"

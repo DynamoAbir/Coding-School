@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 
 const SignIn = () => {
 
-  const {signIn}=useContext(AuthContext);
+  const {signIn,googleSignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from=location.state?.from?.pathname || '/';
@@ -29,7 +29,22 @@ const SignIn = () => {
     })
     .catch(err=>console.error(err));
     console.log(email,password);
+
+    
   }
+/* Google */
+const handleGoogle=()=>{
+  googleSignIn()
+  .then(result=>{
+    const user = result.user;
+    toast.success("Sign In Successfully...")
+    console.log(user);
+  })
+  .catch(err=>console.error(err)
+  )
+}
+/* Google */
+  
     return (
         <div>
         <div className="w-full mt-[-20px] py-10 px-1 sm:px-5 flex flex-col items-center bg-gradient-to-t from-gray-100 via-white to-[#b2eac9] font-body">
@@ -126,7 +141,7 @@ const SignIn = () => {
               {/* :::External Autentification */}
               <div className="flex flex-col items-center text-white">
                 
-                <button className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600">
+                <button onClick={handleGoogle} className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600">
                   <svg
                     role="img"
                     className="flex-shrink-0 w-5 h-5 mr-5"
