@@ -26,6 +26,7 @@ const Header = () => {
               <img src={logo} alt="logo" className="w-16 h-16" />
             </Link>
           </nav>
+          <h1 className="text-white  text-3xl ms-5 hidden lg:block">Coding School</h1>
         </a>
         {/* ::Navbar */}
         <nav className="hidden md:flex flex-wrap items-center justify-center text-xl font-semibold tracking-wide">

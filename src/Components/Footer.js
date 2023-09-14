@@ -32,7 +32,7 @@ const Footer = () => {
 <footer className="footer items-center p-4 bg-[#49a99a] text-[#f3fdf7]">
   <aside className="items-center grid-flow-col">
     <img src={logo} className='w-10' alt="" />
-    <p>Copyright © 2023 - All right reserved</p>
+    <p>Copyright © 2023 - All right reserved by Coding School</p>
   </aside> 
   
 </footer>
