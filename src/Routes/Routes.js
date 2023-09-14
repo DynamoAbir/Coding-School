@@ -2,6 +2,7 @@ import Blog from "../Pages/Blog";
 import CheckOut from "../Pages/CheckOut";
 import Courses from "../Pages/Courses";
 import CoursesDetails from "../Pages/CoursesDetails";
+import Errorpage from "../Pages/Errorpage";
 import FAQ from "../Pages/FAQ";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
@@ -54,7 +55,8 @@ export const router=createBrowserRouter([
                 loader:({params})=>fetch(`http://localhost:5000/courses/${params.id}`)
             }
            
-        ]
+        ],
+        errorElement:<Errorpage></Errorpage>
     }
 ])
 
