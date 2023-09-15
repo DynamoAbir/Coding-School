@@ -49,14 +49,14 @@ const Header = () => {
         </nav>
 
         {/* ::Avatar */}
-       {user?.email? <Link onClick={handleLogOut} className="mr-8 text-xl hover:text-indigo-500">
+       {user?.uid? <Link onClick={handleLogOut} className="mr-8 text-xl hover:text-indigo-500">
           Sign Out
         </Link>: <Link to="/signin" className="mr-8 text-xl hover:text-indigo-500">
           Sign In
         </Link>}
         <nav>
           <Link className="flex  gap-3" to="/">
-           {user?.email?  <img
+           {user?.uid?  <img
             
               src={user?.photoURL}
               alt="logo"
