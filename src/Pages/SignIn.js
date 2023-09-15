@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import banner from '../Assets/3426526.jpg'
 import { FaMailBulk,FaKey } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import toast from 'react-hot-toast';
 
 
 const SignIn = () => {
-
+  const [error,setError]=useState('');
   const {signIn,googleSignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
@@ -19,16 +19,16 @@ const SignIn = () => {
     const form=e.target;
     const email=form.email.value;
     const password=form.password.value;
-
+    
     signIn(email,password)
     .then(result=>{
       const user=result.user;
-      toast.success('Login Successfully..')
-      console.log(user);
       navigate(from,{replace:true})
+      navigate('/')
+      toast.success('Login Successfully..')
     })
-    .catch(err=>console.error(err));
-    console.log(email,password);
+    .catch(err=>setError(err.message));
+    
 
     
   }
@@ -37,10 +37,12 @@ const handleGoogle=()=>{
   googleSignIn()
   .then(result=>{
     const user = result.user;
+    navigate(from,{replace:true})
+    navigate('/')
     toast.success("Sign In Successfully...")
     console.log(user);
   })
-  .catch(err=>console.error(err)
+  .catch(err=>setError(err.message)
   )
 }
 /* Google */
@@ -130,7 +132,7 @@ const handleGoogle=()=>{
                   Forgot password?
                 </a>
               </div>
-  
+              <p className='mt-5 text-red-700'>{error}</p>
               {/* :::Divide line */}
               <div className="my-10 flex items-center justify-center text-xl">
                 <span className="w-full mr-4 h-px bg-gray-300" />

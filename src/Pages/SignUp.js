@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import banner from '../Assets/3426526.jpg'
 import { FaMailBulk,FaUserEdit,FaKey } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,12 +8,12 @@ import toast from "react-hot-toast";
 
 
 
-
 const SignUp = () => {
   const {createUser,googleSignIn}=useContext(AuthContext);
   const navigate=useNavigate();
   const location=useLocation();
   const from=location.state?.from?.pathname || '/';
+  const [error,setError]=useState('');
   const handleSubmit=(e)=>{
     e.preventDefault();
     const form=e.target;
@@ -28,7 +28,7 @@ const SignUp = () => {
       navigate(from,{replace:true})
       toast.success("Account Created Successfully")
     })
-    .catch(error=>console.error(error))
+    .catch(err=>setError(err.message));
     
   }
 
@@ -39,7 +39,9 @@ const handleGoogle=()=>{
    const user=result.user;
     console.log(user);
   })
-  .catch(err=>console.error(err))
+  .catch((err)=>{
+    setError(err.message);
+  })
 }
   /* Google */
 
@@ -144,6 +146,7 @@ const handleGoogle=()=>{
                 Forgot password?
               </a>
             </div>
+            <p className="mt-5 text-red-700">{error}</p>
 
             {/* :::Divide line */}
             <div className="my-10 flex items-center justify-center text-xl">
