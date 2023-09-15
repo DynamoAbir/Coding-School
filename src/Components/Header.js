@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo_transparent.png";
 import { AuthContext } from "../Context/UseContext";
-import userImg from '../Assets/user.jpg'
+import userImg from "../Assets/user.jpg";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -26,7 +26,9 @@ const Header = () => {
               <img src={logo} alt="logo" className="w-16 h-16" />
             </Link>
           </nav>
-          <h1 className="text-white  text-3xl ms-5 hidden lg:block">Coding School</h1>
+          <h1 className="text-white  text-3xl ms-5 hidden lg:block">
+            Coding School
+          </h1>
         </a>
         {/* ::Navbar */}
         <nav className="hidden md:flex flex-wrap items-center justify-center text-xl font-semibold tracking-wide">
@@ -49,19 +51,30 @@ const Header = () => {
         </nav>
 
         {/* ::Avatar */}
-       {user?.uid? <Link onClick={handleLogOut} className="mr-8 text-xl hover:text-indigo-500">
-          Sign Out
-        </Link>: <Link to="/signin" className="mr-8 text-xl hover:text-indigo-500">
-          Sign In
-        </Link>}
+        {user?.uid ? (
+          <Link
+            onClick={handleLogOut}
+            className="mr-8 text-xl hover:text-indigo-500"
+          >
+            Sign Out
+          </Link>
+        ) : (
+          <Link to="/signin" className="mr-8 text-xl hover:text-indigo-500">
+            Sign In
+          </Link>
+        )}
         <nav>
           <Link className="flex  gap-3" to="/">
-           {user?.uid?  <img
-            
-              src={user?.photoURL}
-              alt="logo"
-              className="w-12 h-12  rounded-xl"
-            />: <img className="h-12 w-12 rounded-3xl" src={userImg}></img>}
+            {user?.uid ? (
+              <img
+                title={user?.displayName}
+                src={user?.photoURL}
+                alt="logo"
+                className="w-12 h-12  rounded-xl"
+              />
+            ) : (
+              <img className="h-12 w-12 rounded-3xl" src={userImg}></img>
+            )}
           </Link>
         </nav>
         {/* ::Burger icon standard */}

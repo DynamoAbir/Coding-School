@@ -1,66 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Team = () => {
-    const people = [
-        {
-          name: "Tonyo Delapena",
-          role: "Boss",
-          picture: "https://fancytailwind.com/static/profile3-7d5e2246807e801f5e5037c1234fc121.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        {
-          name: "Laetitia Librals",
-          role: "Designer",
-          picture: "https://fancytailwind.com/static/profile14-e9ac6c7d68a78a1cbbf29458acacc95a.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        {
-          name: "Albert Jones-Marcel",
-          role: "Developer",
-          picture: "https://fancytailwind.com/static/profile10-9e05bd5638c669c34c11cb0462d95aa9.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        {
-          name: "Tonyo Delapena",
-          role: "Boss",
-          picture: "https://fancytailwind.com/static/profile3-7d5e2246807e801f5e5037c1234fc121.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        {
-          name: "Laetitia Librals",
-          role: "Designer",
-          picture: "https://fancytailwind.com/static/profile14-e9ac6c7d68a78a1cbbf29458acacc95a.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        {
-          name: "Albert Jones-Marcel",
-          role: "Developer",
-          picture: "https://fancytailwind.com/static/profile10-9e05bd5638c669c34c11cb0462d95aa9.jpg",
-          facebookURL: "#link",
-          twitterURL: "#link",
-          linkedinURL: "#link",
-          youtubeURL: "#link",
-        },
-        
-      ]
-    return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 min-h-screen">
+  return (
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 min-h-screen">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -117,18 +60,12 @@ const Team = () => {
                 Vincent Van Gogh’s most popular painting, The Starry Night.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -153,18 +90,12 @@ const Team = () => {
                 Amet I love liquorice jujubes pudding croissant I love pudding.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -189,18 +120,12 @@ const Team = () => {
                 Apple pie macaroon toffee jujubes pie tart cookie caramels.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -226,18 +151,12 @@ const Team = () => {
                 elit.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -263,18 +182,12 @@ const Team = () => {
                 flank.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -300,18 +213,12 @@ const Team = () => {
                 bigeye.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -337,18 +244,12 @@ const Team = () => {
                 pea.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -374,18 +275,12 @@ const Team = () => {
                 halloumi.
               </p>
               <div className="flex items-center justify-center space-x-3">
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
                   </svg>
                 </Link>
-                <Link
-                  
-                  className="text-white transition-colors duration-300 hover:text-teal-accent-400"
-                >
+                <Link className="text-white transition-colors duration-300 hover:text-teal-accent-400">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                     <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                   </svg>
@@ -396,7 +291,7 @@ const Team = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Team;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const SignUpBtn = ({children}) => {
+const SignUpBtn = ({ children }) => {
   return (
     <a
       href="#_"

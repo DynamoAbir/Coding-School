@@ -1,61 +1,63 @@
 import React, { useContext, useState } from "react";
-import banner from '../Assets/3426526.jpg'
-import { FaMailBulk,FaUserEdit,FaKey } from "react-icons/fa";
+import banner from "../Assets/3426526.jpg";
+import { FaMailBulk, FaUserEdit, FaKey } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SignUpBtn from "../Components/SignUpBtn";
 import { AuthContext } from "../Context/UseContext";
 import toast from "react-hot-toast";
 import { FaGithub } from "react-icons/fa";
 
-
 const SignUp = () => {
-  const {createUser,googleSignIn,gitHubSignIn}=useContext(AuthContext);
-  const navigate=useNavigate();
-  const location=useLocation();
-  const from=location.state?.from?.pathname || '/';
-  const [error,setError]=useState('');
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    const form=e.target;
-    const name=form.name.value;
-    const email=form.email.value;
-    const password=form.password.value;
+  const { createUser, googleSignIn, gitHubSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const [error, setError] = useState("");
 
-    createUser(email,password)
-    .then(result=>{
-      const user=result.user;
-      console.log(user);
-      navigate(from,{replace:true})
-      toast.success("Account Created Successfully")
-    })
-    .catch(err=>setError(err.message));
-    
-  }
+  /* Email Pass Auth */
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+        toast.success("Account Created Successfully");
+      })
+      .catch((err) => setError(err.message));
+  };
+  /* Email Pass Auth */
+
   /* GitHub */
-  const handleGitHub=()=>{
+  const handleGitHub = () => {
     gitHubSignIn()
-    .then(result=>{
-      const user=result.user;
-      console.log(user);
-      navigate(from,{replace:true})
-      
-      toast.success('Login Successfully..')
-    })
-    .catch(err=>setError(err.message))
-  }
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+
+        toast.success("Login Successfully..");
+      })
+      .catch((err) => setError(err.message));
+  };
   /* GitHub */
 
   /* Google */
-const handleGoogle=()=>{
-  googleSignIn()
-  .then(result=>{
-   const user=result.user;
-    console.log(user);
-  })
-  .catch((err)=>{
-    setError(err.message);
-  })
-}
+  const handleGoogle = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
   /* Google */
 
   return (
@@ -66,7 +68,7 @@ const handleGoogle=()=>{
         {/* :TITLE */}
         <div className="mb-16 text-center">
           <h1 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-           Sign Up
+            Sign Up
           </h1>
         </div>
         {/* :LOGIN CONTAINER */}
@@ -84,9 +86,8 @@ const handleGoogle=()=>{
                 <span className="pl-2 pr-4 border-r border-gray-200">
                   <FaUserEdit></FaUserEdit>
                 </span>
-                <label  className="py-2">
+                <label className="py-2">
                   <input
-                    
                     type="text"
                     name="name"
                     className="form-input h-8 py-5 px-5 border-none text-yellow-600 focus:ring-0 focus:outline-none"
@@ -98,11 +99,10 @@ const handleGoogle=()=>{
               {/* Email */}
               <div className="my-2 px-2 flex items-center border border-gray-300 rounded">
                 <span className="pl-2 pr-4 border-r border-gray-200">
-                <FaMailBulk></FaMailBulk>
+                  <FaMailBulk></FaMailBulk>
                 </span>
                 <label htmlFor="email" className="py-2">
                   <input
-                    
                     type="email"
                     name="email"
                     className="form-input h-8 py-5 px-5 border-none text-yellow-600 focus:ring-0 focus:outline-none"
@@ -118,7 +118,6 @@ const handleGoogle=()=>{
                 </span>
                 <label htmlFor="password" className="py-2">
                   <input
-                    
                     type="password"
                     name="password"
                     className="form-input h-8 py-5 px-5 border-none text-yellow-600 focus:ring-0 focus:outline-none"
@@ -140,7 +139,7 @@ const handleGoogle=()=>{
                 </label>
                 {/* Button Login */}
                 <button type="submit">
-                    <SignUpBtn>Sign Up</SignUpBtn>
+                  <SignUpBtn>Sign Up</SignUpBtn>
                 </button>
               </div>
             </form>
@@ -148,7 +147,8 @@ const handleGoogle=()=>{
             {/* :::Additional options */}
             <div className="mt-2 flex justify-around items-center text-sm">
               {/* Register now */}
-              <Link to='/signin'
+              <Link
+                to="/signin"
                 href="#link"
                 className="text-yellow-500 transition duration-150 transform hover:scale-105"
               >
@@ -170,8 +170,10 @@ const handleGoogle=()=>{
 
             {/* :::External Autentification */}
             <div className="flex flex-col items-center text-white">
-              
-              <button onClick={handleGoogle} className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600">
+              <button
+                onClick={handleGoogle}
+                className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-red-500 font-semibold uppercase tracking-wider hover:bg-red-600"
+              >
                 <svg
                   role="img"
                   className="flex-shrink-0 w-5 h-5 mr-5"
@@ -186,22 +188,19 @@ const handleGoogle=()=>{
             </div>
 
             <div className="flex flex-col items-center text-white">
-                
-                <button onClick={handleGitHub} className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-orange-400 font-semibold uppercase tracking-wider hover:bg-orange-600">
-                  <FaGithub className='h-6 w-6 mr-6'></FaGithub>
-                  Login with GitHub
-                </button>
-              </div>
-            
+              <button
+                onClick={handleGitHub}
+                className="mb-2.5 py-3 px-7 rounded-md flex justify-between items-center bg-orange-400 font-semibold uppercase tracking-wider hover:bg-orange-600"
+              >
+                <FaGithub className="h-6 w-6 mr-6"></FaGithub>
+                Login with GitHub
+              </button>
+            </div>
           </div>
 
           {/* ::Illustration */}
           <div className="relative hidden lg:block lg:col-span-1 w-full h-full bg-gray-200">
-            <img
-              src={banner}
-              alt=""
-              className="absolute h-full w-full"
-            />
+            <img src={banner} alt="" className="absolute h-full w-full" />
           </div>
         </div>
       </div>

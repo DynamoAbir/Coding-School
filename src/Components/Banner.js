@@ -29,7 +29,9 @@ const Banner = () => {
             {/* :::Button & Social media */}
             <div className="mt-10 flex flex-col sm:flex-row items-center">
               {/* Button */}
-              <Link to='/courses'><CodingBtn>Lets Go To Our Courses</CodingBtn></Link>
+              <Link to="/courses">
+                <CodingBtn>Lets Go To Our Courses</CodingBtn>
+              </Link>
               {/* Social networks */}
               <div className="mt-5 sm:mt-0 sm:ml-5 inline-flex items-center">
                 {/* Twitter */}
