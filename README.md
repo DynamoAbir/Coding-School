@@ -1,6 +1,6 @@
 # Project Name is Coding School
 
-## Live Website Link is [Coding School](https://coder-bot.web.app/)
+## Live Website Link is [Coding School](https://coding-school-56033.web.app/)
 
 * Live Server Link is [Coding School Server](https://coding-school-server-tgu4.vercel.app/)
 
